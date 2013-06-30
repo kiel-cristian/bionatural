@@ -1,0 +1,14 @@
+- images = images || nil
+- if images.presence
+  #myCarousel.carousel.slide
+    .carousel-inner
+      - images.each.with_index do |image, index|
+        - index == 0 ? item_class = 'item active' : 'item'
+
+        %div{ class: item_class}
+          .carousel-caption
+            %h4= image[:title]
+            %p= image[:info]
+            = image_tag image[:name]
+    %a.carousel-control.left{ href: '#myCarousel', 'data-slide' => 'prev'} &lsaquo;
+    %a.carousel-control.rigth{ href: '#myCarousel', 'data-slide' => 'next', style: 'margin-left: 1000px;' } &rsaquo;

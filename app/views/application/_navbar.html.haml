@@ -1,0 +1,17 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      = link_to t('title'), root_path , {class: 'brand' }
+      .container.nav-collapse
+        %ul.nav
+          -# pending
+            - if(not user_signed_in?)
+              %li= link_to model_class.human_attribute_name(:sign_in), new_user_session_path
+              %li= link_to model_class.human_attribute_name(:sign_up), new_user_registration_path
+            - else
+              %li= link_to model_class.human_attribute_name(:sign_out), destroy_user_session_path
+            %li= link_to model_class.human_attribute_name(:cart), new_cart_path

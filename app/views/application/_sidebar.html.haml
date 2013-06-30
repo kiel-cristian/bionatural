@@ -1,0 +1,13 @@
+- title = title | nil
+- links = links | []
+
+- if title.presence or links.presence
+  .well.sidebar-nav
+    - if title
+      %h3= title
+    - if links.presence
+      %ul.nav.nav-list
+        %li.nav-header Sidebar
+        %li= link_to "Link 1", "/path1"
+        %li= link_to "Link 2", "/path2"
+        %li= link_to "Link 3", "/path3"
