@@ -60,6 +60,7 @@ Bionatural::Application.configure do
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
   # config.assets.precompile += %w( search.js )
+  config.assets.precompile += [ 'modernizr-2.6.2-respond-1.1.0.min.js', 'bootstrap.js', 'bootstrap/bootstrap.min.js', 'h5bp/normalize.css' ]
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
