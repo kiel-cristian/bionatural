@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require modernizr-2.6.2-respond-1.1.0.min
+//= require bootstrap.min
 //= require_tree .

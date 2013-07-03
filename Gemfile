@@ -37,7 +37,13 @@ group :test do
   gem 'shoulda'
 end
 
-# Haml instead of ERB
+# Frontend
+group :assets do
+  gem 'therubyracer', :platforms => :ruby # required by less-rails
+  gem 'less-rails'
+  gem 'turbo-sprockets-rails3'
+end
+
 gem "haml-rails"
 
 group :doc do
